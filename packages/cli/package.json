@@ -1,0 +1,55 @@
+{
+    "name": "aoc-cli",
+    "version": "0.0.0",
+    "description": "Opinionated advent of code cli",
+    "publishConfig": {
+        "access": "public"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "acgriswold",
+        "url": "https://github.com/acgriswold"
+    },
+    "repository": {
+        "type": "github",
+        "url": "https://github.com/acgriswold/aoc-cli",
+        "directory": "packages/cli/"
+    },
+    "files": [
+        "dist"
+    ],
+    "keywords": [
+        "cli",
+        "advent of code"
+    ],
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": "./dist/index.js",
+    "bin": "./dist/index.js",
+    "scripts": {
+        "dev": "tsup --watch",
+        "build": "tsup",
+        "typecheck": "tsc --noEmit",
+        "start": "node dist/index.js",
+        "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
+        "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
+        "release": "npx changeset version",
+        "pub:beta": "pnpm build && pnpm publish --no-git-checks --access public --tag beta",
+        "pub:next": "pnpm build && pnpm publish --no-git-checks --access public --tag next",
+        "pub:release": "pnpm build && pnpm publish --access public",
+        "test": "vitest run"
+    },
+    "dependencies": {
+        "chalk": "^5.3.0",
+        "commander": "^11.1.0",
+        "cosmiconfig": "^8.3.6",
+        "prompts": "^2.4.2",
+        "typescript": "latest",
+        "zod": "^3.22.4"
+    },
+    "devDependencies": {
+        "tsup": "^7.3.0"
+    }
+}

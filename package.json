@@ -4,7 +4,8 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "publish-packages": "turbo run build lint test && changeset version && changeset publish"
   },
   "devDependencies": {
     "eslint": "^8.48.0",
@@ -13,5 +14,9 @@
     "turbo": "latest"
   },
   "packageManager": "pnpm@8.9.0",
-  "name": "aoc-cli"
+  "name": "aoc-cli",
+  "dependencies": {
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "^0.34.6"
+  }
 }
