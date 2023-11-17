@@ -50,6 +50,7 @@
         "zod": "^3.22.4"
     },
     "devDependencies": {
+        "@types/node": "^20.9.1",
         "tsup": "^7.3.0"
     }
 }
