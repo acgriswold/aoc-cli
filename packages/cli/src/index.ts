@@ -12,7 +12,7 @@ async function main() {
         .name("aoc-cli")
         .description("add advent of code files and data to your project")
         .version(
-            "0.0.4",
+            "0.0.5",
             "-v, --version",
             "display the version number"
         )
