@@ -1,6 +1,6 @@
 {
     "name": "@acgris/aoc-cli",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Opinionated advent of code cli",
     "type": "module",
     "main": "./dist/index.js",
