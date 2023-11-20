@@ -1,5 +1,5 @@
 {
-    "name": "aoc-cli",
+    "name": "@acgris/aoc-cli",
     "version": "0.0.0",
     "description": "Opinionated advent of code cli",
     "publishConfig": {
