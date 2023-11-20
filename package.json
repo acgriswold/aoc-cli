@@ -5,7 +5,13 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "publish-packages": "turbo run build lint test && changeset version && changeset publish"
+    "publish-packages": "turbo run build lint test && changeset version && changeset publish",
+
+    "build:cli": "turbo build --filter=shadcn-ui",
+    "dev:cli": "turbo dev --filter=shadcn-ui",
+    "start:cli": "turbo start --filter=shadcn-ui",
+    "publish:beta:cli": "cd packages/cli && pnpm publish:beta",
+    "publish:release:cli": "cd packages/cli && pnpm publish:release"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
