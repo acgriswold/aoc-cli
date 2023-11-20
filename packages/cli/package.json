@@ -1,7 +1,17 @@
 {
     "name": "@acgris/aoc-cli",
-    "version": "0.0.0",
+    "version": "0.0.3",
     "description": "Opinionated advent of code cli",
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "files": [ "dist/**" ],
+    "bin": "./dist/index.js",
+    "keywords": [
+        "cli",
+        "advent of code"
+    ],
     "publishConfig": {
         "access": "public"
     },
@@ -15,19 +25,6 @@
         "url": "https://github.com/acgriswold/aoc-cli",
         "directory": "packages/cli/"
     },
-    "files": [
-        "dist"
-    ],
-    "keywords": [
-        "cli",
-        "advent of code"
-    ],
-    "type": "module",
-    "main": "./dist/index.js",
-    "module": "./dist/index.mjs",
-    "types": "./dist/index.d.ts",
-    "exports": "./dist/index.js",
-    "bin": "./dist/index.js",
     "scripts": {
         "dev": "tsup --watch",
         "build": "tsup",

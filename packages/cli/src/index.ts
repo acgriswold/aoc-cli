@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { Command } from "commander"
 
 import { init } from "@/src/command/init"
@@ -7,7 +9,7 @@ async function main() {
         .name("aoc-cli")
         .description("add advent of code files and data to your project")
         .version(
-            "0.0.0",
+            "0.0.3",
             "-v, --version",
             "display the version number"
         )
