@@ -1,7 +1,17 @@
 {
-    "name": "aoc-cli",
-    "version": "0.0.0",
+    "name": "@acgris/aoc-cli",
+    "version": "0.0.3",
     "description": "Opinionated advent of code cli",
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "files": [ "dist/**" ],
+    "bin": "./dist/index.js",
+    "keywords": [
+        "cli",
+        "advent of code"
+    ],
     "publishConfig": {
         "access": "public"
     },
@@ -15,19 +25,6 @@
         "url": "https://github.com/acgriswold/aoc-cli",
         "directory": "packages/cli/"
     },
-    "files": [
-        "dist"
-    ],
-    "keywords": [
-        "cli",
-        "advent of code"
-    ],
-    "type": "module",
-    "main": "./dist/index.js",
-    "module": "./dist/index.mjs",
-    "types": "./dist/index.d.ts",
-    "exports": "./dist/index.js",
-    "bin": "./dist/index.js",
     "scripts": {
         "dev": "tsup --watch",
         "build": "tsup",
@@ -36,9 +33,9 @@
         "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
         "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
         "release": "npx changeset version",
-        "pub:beta": "pnpm build && pnpm publish --no-git-checks --access public --tag beta",
-        "pub:next": "pnpm build && pnpm publish --no-git-checks --access public --tag next",
-        "pub:release": "pnpm build && pnpm publish --access public",
+        "publish:beta": "pnpm build && pnpm publish --no-git-checks --access public --tag beta",
+        "publish:next": "pnpm build && pnpm publish --no-git-checks --access public --tag next",
+        "publish:release": "pnpm build && pnpm publish --access public",
         "test": "vitest run"
     },
     "dependencies": {
