@@ -1,9 +1,9 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, type NextRequest } from 'next/server';
 
 import { templates } from './mock-templates'
 
 export function GET(
-    req: NextResponse
+    _: NextRequest, 
 ) {
     console.log("Returning ts template ", templates)
 
