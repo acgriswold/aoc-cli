@@ -1,9 +1,9 @@
-type FileProps = {
+interface FileProps {
     name: string,
     content: string
 }
 
-export type TemplateProps = {
+export interface TemplateProps {
     name: string,
     files: FileProps[]
 }

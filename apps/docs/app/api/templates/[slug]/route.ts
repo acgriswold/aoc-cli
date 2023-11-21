@@ -1,13 +1,10 @@
-import { NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { templates } from '../mock-templates'
 
-
 export function GET(
-    req: NextResponse, 
+    _: NextRequest, 
     { params }: { params: { slug: string } }
 ) {
-    console.log(`Attempting to retrieve ${params.slug} template`)
-
     const template = templates.get(params.slug)
 
     if (!template)
@@ -15,8 +12,6 @@ export function GET(
             status: 404,
             message: `Unable to retrieve ${params.slug} template`
         })
-
-    console.log("Returning template ", template)
 
     return NextResponse.json({
         status: 200,
